@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tea</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div class="tea"></div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+<script>
+    $(function () {
+        let keyframes = '@keyframes teaFlow {'
+        let eachframe = ''
+        for (i = 0; i <= 22; i++) {
+            var a = 242 * i;
+            var b = (100 / 22) * i;
+            b = Math.floor(b * 100) / 100;
+            eachframe = b + '% {' + 'background-position-y: -' + a + 'px }'
+            keyframes += eachframe
+            // console.log(b + "% background-position-y: -" + a + "px")
+        }
+        $('<style type="text/css">'+keyframes+'<style>').appendTo($('head'));
+    })
+</script>

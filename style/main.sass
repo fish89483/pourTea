@@ -1,0 +1,79 @@
+@charset "UTF-8"
+@import "Mixin/reset"
+@import "Mixin/mixin"
+@import "Mixin/media_query"
+@import "Mixin/keyframes"
+@import "Mixin/shape"
+
+.wrap
+    .content
+        +bg('image/exploreBg.jpg',left,cover)
+        width: 100%
+        // padding-bottom: (855/1920)*100+%
+        // height: 0
+        height: 855px
+        position: relative
+        max-width: 1920px
+        .tea
+            position: absolute
+            +bg('image/animate2.jpg',0 0,cover)
+            width: 254px
+            height: 242px
+            left: 385px
+            top: 352px
+            animation: teaFlow 2s infinite step-end
+            // animation-play-state: paused
+            // &:hover
+            //     animation-play-state: running
+
+
+// @keyframes teaFlow
+//     0%
+//         background-position-y: 0
+//     4.54%
+//         background-position-y: -242px
+//     9.09%
+//         background-position-y: -484px
+//     13.63%
+//         background-position-y: -726px
+//     18.18%
+//         background-position-y: -968px
+//     22.72%
+//         background-position-y: -1210px
+//     27.27%
+//         background-position-y: -1452px
+//     31.81%
+//         background-position-y: -1694px
+//     36.36%
+//         background-position-y: -1936px
+//     40.90%
+//         background-position-y: -2178px
+//     45.45%
+//         background-position-y: -2420px
+//     50%
+//         background-position-y: -2662px
+//     54.54%
+//         background-position-y: -2904px
+//     59.09%
+//         background-position-y: -3146px
+//     63.63%
+//         background-position-y: -3388px
+//     68.18%
+//         background-position-y: -3630px
+//     72.72%
+//         background-position-y: -3872px
+//     77.27%
+//         background-position-y: -4114px
+//     81.81%
+//         background-position-y: -4356px
+//     86.36%
+//         background-position-y: -4598px
+//     90.90%
+//         background-position-y: -4840px
+//     95.45%
+//         background-position-y: -5082px
+//     100%
+//         background-position-y: -5324px
+
+
+

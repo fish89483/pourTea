@@ -1,0 +1,54 @@
+@charset "UTF-8"
+
+// align translate
+@mixin align-trans($XYZ:C)
+    @if $XYZ != C
+        transform: translate+'#{$XYZ}'+'(-50%)'
+        @if $XYZ == X
+            left: 50%
+        @if $XYZ == Y
+            top: 50%
+    
+    @if $XYZ == C
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+// background
+@mixin bg($url,$position,$size:Initial,$repeat:no-repeat)
+    background: 
+        image:  url($url)
+        position: $position
+        size: $size
+        repeat: $repeat 
+
+// 圓角 radius
+@mixin border($w,$type,$color,$dir)
+    border-#{$dir}: $w $type $color
+@mixin borderR($dir,$a:0)
+    @if $dir ==top
+        border-radius: $a $a 0 0
+    @if $dir ==bottom
+        border-radius: 0 0 $a $a 
+    @if $dir ==left
+        border-radius: $a 0 0 $a
+    @if $dir ==right
+        border-radius: 0 $a $a 0
+    
+        
+    
+    
+    
+     
+
+// 溢出省略顯示為...
+@mixin text-ellipsis() 
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+@mixin clearfix
+    &::after
+        display: block
+        content: ""
+        clear: both
+
